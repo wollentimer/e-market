@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Market.DataAccess.Database.Entities\Market.DataAccess.Database.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
