@@ -8,7 +8,10 @@ namespace Market.DataAccess.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Game> builder)
         {
-            
+            builder.HasOne(x => x.User)
+                .WithMany(x => x.Games)
+                .HasForeignKey(x => x.User.Id)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
