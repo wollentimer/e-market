@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Market.DataAccess.Database.Entities
 {
-    public class Game
+    public class Game : BaseEntity
     {
-
+        public User User { get; set; }
     }
 }
