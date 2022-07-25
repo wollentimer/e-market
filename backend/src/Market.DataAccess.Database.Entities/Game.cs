@@ -2,6 +2,6 @@
 {
     public class Game : BaseEntity
     {
-
+        public User User { get; set; }
     }
 }
