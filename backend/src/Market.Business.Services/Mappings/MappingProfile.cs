@@ -8,8 +8,12 @@ namespace Market.Business.Services.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<Game, GameDto>().ReverseMap();
-            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<Game, GameDto>()
+                .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
+                .ReverseMap();
+            CreateMap<Game, GameDto>()
+                .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
+                .ReverseMap();
         }
     }
 }
