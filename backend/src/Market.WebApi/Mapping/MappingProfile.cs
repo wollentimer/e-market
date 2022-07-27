@@ -8,8 +8,12 @@ namespace Market.WebApi.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<GameDto, GameViewModel>().ReverseMap();
-            CreateMap<UserDto, UserViewModel>().ReverseMap();
+            CreateMap<GameDto, GameViewModel>()
+                .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
+                .ReverseMap();
+            CreateMap<UserDto, UserViewModel>()
+                .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
+                .ReverseMap();
         }
     }
 }
