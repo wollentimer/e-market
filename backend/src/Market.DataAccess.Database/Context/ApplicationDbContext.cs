@@ -18,5 +18,6 @@ namespace Market.DataAccess.Database.Context
         }
 
         public DbSet<Game>? Games { get; set; }
+
     }
 }

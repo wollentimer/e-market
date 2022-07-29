@@ -15,6 +15,7 @@ namespace Market.WebApi.Controllers
         public TestController(IMapper mapper, IGameService gameService)
         {
             _gameService = gameService;
+            _mapper = mapper;
         }
 
         [HttpGet("Get")]
