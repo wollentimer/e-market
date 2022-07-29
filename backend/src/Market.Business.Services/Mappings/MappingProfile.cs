@@ -11,7 +11,7 @@ namespace Market.Business.Services.Mappings
             CreateMap<Game, GameDto>()
                 .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
                 .ReverseMap();
-            CreateMap<Game, GameDto>()
+            CreateMap<User, UserDto>()
                 .ForMember(o => o.Id, ex => ex.MapFrom(o => o.Id))
                 .ReverseMap();
         }
