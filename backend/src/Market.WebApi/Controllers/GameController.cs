@@ -7,12 +7,12 @@ namespace Market.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TestController : Controller
+    public class GameController : Controller
     {
         private readonly IGameService _gameService;
         private readonly IMapper _mapper;
 
-        public TestController(IMapper mapper, IGameService gameService)
+        public GameController(IMapper mapper, IGameService gameService)
         {
             _gameService = gameService;
             _mapper = mapper;
